@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--  embeded stylesheet -->
+    <style>
+        label { 
+            display: inline-block; 
+            width: 120px; 
+        }
+
+        input, textarea { 
+            width: 300px; 
+            padding: 10px; 
+            margin-bottom: 5px; 
+        }
+
+        input[type="submit"] { 
+                width: auto; 
+        }
+
+        .required::after {
+            content: "*"; 
+            color: red;
+        }
+
+        #note::before { 
+            content: "*";
+            color: red;
+        }
+
+        label + input { 
+            background-color: rgb(219,241,248); 
+        }
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+        .Username {
+            text-align: left;
+        }
+        .Password {
+            text-align: left;
+        }
+        form {
+            text-align: center;
+        }
+        body {
+            background-color: rgb(4, 145, 110);
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Information System</h1>
+    <p id="note">indicates required field.</p>
+    <form>
+        <label for="Username" class="required">Username</label>
+        <input type="text" id="Username" required><br>
+        <label for="Password" class="required">Password</label>
+        <input type="password" id="Password" required><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
