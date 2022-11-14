@@ -1,9 +1,9 @@
 /* Change value of color-one-RGB to change theme*/
 :root {
     --color-one: rgb(var(--color-one-RGB));
-    --color-one-RGB: 0,51,102;
+    --color-one-RGB: 63,100,140;
     --color-two: rgb(var());
-    --color-two-RGB: 63,100,140
+    --color-two-RGB: 4, 145, 110;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -45,6 +45,13 @@ body {
     background-color: rgb(var(--color-one-RGB), 0.2);
 }
 
+/* The Following Code Exists Across All Pages As The Header */
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .header {
     z-index: 2;
     position: fixed;
@@ -77,11 +84,25 @@ body {
     align-items: center;
 }
 
+#header_tags_right_authed {
+    display: inline-flex;
+    list-style: none;   
+    margin-right: 3rem;
+    height: 100%;
+    width: 8rem;
+    justify-content: space-between;
+    align-items: center;   
+}
+
 #logo {
     background-color: var(--color-one);
     color: white;
     padding: .9rem;
 }
+
+/* END HEADER */
+
+/* Registration on index */
 
 #signup {
     padding: .5rem;
@@ -196,6 +217,10 @@ label {
     background-color: rgb(232, 232, 232);
 }
 
+.register_as a {
+    color: black;
+}
+
 .register_as:hover {
     background-color: var(--color-one);
     color: rgb(255, 255, 255);
@@ -220,3 +245,93 @@ label {
     width: 1.5rem;
     height: 1.5rem;
 }
+
+/* END INDEX */
+
+#tab_wrapper {
+    position: absolute;
+    top: 10rem;
+    left: 2.5rem;
+    background-color: white;
+    width: calc(100vw - 7rem);
+    height: 20rem;
+    padding: 1rem;
+    border-radius: .25rem;
+}
+
+#tab_wrapper h1 {
+    text-decoration: none;
+}
+
+.student_tabs {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    list-style: disc;
+    text-decoration: underline;
+}
+
+#course_menu {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    padding: 2rem;
+    top: 6rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    height: calc(90vh - 9rem);
+    background-color: white;
+    border-radius: .25rem;
+}
+
+.course_tab {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.236);
+}
+
+.course_tab:nth-of-type(4n) {
+    background-color: rgba(255, 0, 0, 0.125);
+}
+
+.course_tab:nth-of-type(4n+1) {
+    background-color: rgba(0, 128, 0, 0.125);
+}
+
+.course_tab:nth-of-type(4n+2) {
+    background-color: rgba(255, 255, 0, 0.125);
+}
+
+.course_tab:nth-of-type(4n+3) {
+    background-color: rgba(0, 0, 255, 0.125);
+}
+
+.course_tab:hover {
+    background-color: aliceblue;
+    transition: all 0.2s 0s ease-in-out;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.236);
+}
+
+.course_tab_top {
+    width: 100%;
+    height: 50%;
+}
+
+.course_tab_bottom {
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.course_tab_title {
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+}
+
