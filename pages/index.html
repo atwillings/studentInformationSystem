@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="..\styles\style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <ul id="header_tags_left">
+                <li id="logo">Logo</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+            <ul id="header_tags_right">
+                <li>Log In</li>
+                <li id="signup">Sign Up</li>
+            </ul>
+        </div>
+        <div id="register_panel">
+            <div id="info">
+                <h1>Register</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde modi nisi optio? Rem provident veniam illo dolor magnam, laboriosam sunt quis voluptates deserunt minima maxime alias, nulla quod! Odio, eaque!</p>
+            </div>
+            <form id="login">
+                <p id="signin">Sign In</p>
+                <div class="input_wrapper">
+                <!-- <label for="username">Username:</label> -->
+                <input class="login_entry" type="text" placeholder="Enter Username / Email"></div>
+                <div class="input_wrapper">
+                <!-- <label for="password">Password:</label> -->
+                <input class="login_entry" type="password" placeholder="Enter Password"></div>
+                <div class="input_wrapper">
+                <!-- <label for="school_id">School ID:</label> -->
+                <input class="login_entry" type="school_id" placeholder="Enter School ID"></div>
+                <div id="button_wrapper">
+                    <p id="button_label">I Want to Register as a:</h5>
+                    <div id="button_group" >
+                        <button form="login" type="button" id="left_button" class="register_as"><a href="student_access.html">Student</a></button>
+                        <button form="login" type="button" class="register_as"><a href="teacher_access.html">Teacher</a></button>
+                        <button form="login" type="button" id="right_button" class="register_as"><a href="admin_access.html">Administrator</a></button>
+                    </div>
+                </div>
+                <input id="submit" type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
