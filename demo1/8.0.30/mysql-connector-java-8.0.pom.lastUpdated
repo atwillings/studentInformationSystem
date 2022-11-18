@@ -1,0 +1,10 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Nov 17 17:27:30 EST 2022
+https\://repo.maven.apache.org/maven2/.lastUpdated=1668724050545
+https\://repo.spring.io/milestone/.error=
+https\://repo.spring.io/milestone/.lastUpdated=1668724049969
+https\://repo.spring.io/snapshot/.error=
+https\://repo.maven.apache.org/maven2/.error=
+@default-rabbit-milestone-https\://dl.bintray.com/rabbitmq/maven-milestones/.lastUpdated=1668724050461
+https\://repo.spring.io/snapshot/.lastUpdated=1668724049879
+https\://dl.bintray.com/rabbitmq/maven-milestones/.error=Could not transfer artifact mysql\:mysql-connector-java\:pom\:8.0 from/to rabbit-milestone (https\://dl.bintray.com/rabbitmq/maven-milestones)\: transfer failed for https\://dl.bintray.com/rabbitmq/maven-milestones/mysql/mysql-connector-java/8.0/mysql-connector-java-8.0.pom, status\: 502 Bad Gateway
