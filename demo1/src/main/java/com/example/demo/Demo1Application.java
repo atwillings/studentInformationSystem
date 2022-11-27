@@ -16,8 +16,6 @@ public class Demo1Application {
     public static void main(String[] args) {
         SpringApplication.run(Demo1Application.class, args);
 
-        Student student1 = new Student(3, "Jane Doe");
-        student1.getClasses();
     }
 
 

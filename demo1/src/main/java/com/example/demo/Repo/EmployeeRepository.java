@@ -1,20 +1,15 @@
 package com.example.demo.Repo;
 
-import com.example.demo.Model.Employee;
-import com.example.demo.Model.Student;
-
-import java.util.List;
+import com.example.demo.Model.Teacher;
 
 public interface EmployeeRepository {
-    int createEmployee(Employee employee);
+    int createEmployee(Teacher employee);
 
-    int updateEmployee(Employee employee);
-
-    Employee findByID(int id);
-
-    List<Employee> findAll();
+    int updateEmployee(Teacher employee);
 
     int deleteByID(int id);
 
-    int updateGrade(Student student);
+    Teacher findByID(int id);
+
+    int updateGrade(int studentID, int employeeID, int classID,char grade);
 }

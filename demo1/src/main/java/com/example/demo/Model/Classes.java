@@ -1,32 +1,49 @@
 package com.example.demo.Model;
 
 public class Classes {
-
-    private String className;
-    private char grade;
+    int studentID;
+    int ClassID;
+    char Grade;
 
     public Classes() {
     }
 
-
-    public Classes(String className, char grade) {
-        this.className = className;
-        this.grade = grade;
+    public int getStudentID() {
+        return studentID;
     }
 
-    public String getClassName() {
-        return className;
+    public void setStudentID(int studentID) {
+        this.studentID = studentID;
     }
 
-    public void setClassName(String className) {
-        this.className = className;
+    public int getClassID() {
+        return ClassID;
+    }
+
+    public void setClassID(int classID) {
+        ClassID = classID;
     }
 
     public char getGrade() {
-        return grade;
+        return Grade;
     }
 
     public void setGrade(char grade) {
-        this.grade = grade;
+        Grade = grade;
+    }
+
+    public Classes(int studentID, int classID, char grade) {
+        this.studentID = studentID;
+        this.ClassID = classID;
+        this.Grade = grade;
+    }
+
+    @Override
+    public String toString() {
+        return "Classes{" +
+                "studentID=" + studentID +
+                ", ClassID=" + ClassID +
+                ", Grade=" + Grade +
+                '}';
     }
 }

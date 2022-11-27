@@ -8,7 +8,6 @@ public class Student {
 
     private int studentID;
     private String studentName;
-    private Classes[] classes;
 
     public Student()  {
     }
@@ -35,20 +34,12 @@ public class Student {
         this.studentName = studentName;
     }
 
-    public void setClasses(Classes[] classes) {
-        this.classes = classes;
-    }
-
-    public Classes[] getClasses() {
-        return classes;
-    }
 
     @Override
     public String toString() {
         return "Student{" +
                 "studentID=" + studentID +
                 ", studentName='" + studentName + '\'' +
-                ", classes=" + Arrays.toString(classes) +
                 '}';
     }
 }

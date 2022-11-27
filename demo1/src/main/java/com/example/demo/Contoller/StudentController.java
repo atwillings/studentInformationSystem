@@ -9,10 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
 @CrossOrigin(origins = "http://localhost")
@@ -66,7 +68,7 @@ public class StudentController {
     @PostMapping("/students")
     public ResponseEntity<String> createStudent(@RequestBody Student student) {
         try {
-            repository.create(new Student(student.getStudentID(), student.getStudentName()));
+            repository.createStudent(new Student(student.getStudentID(), student.getStudentName()));
             return new ResponseEntity<>("[CREATION]" + student.getStudentName() + " was created.", HttpStatus.OK);
         } catch (Exception e) {
             System.out.println("[CREATION FAILED] " + student.getStudentName() + " failed to create.");
@@ -74,27 +76,16 @@ public class StudentController {
         }
     }
 
-    @PutMapping("/students/{id}")
-    public ResponseEntity<String> updateStudent(@PathVariable("id") int id, @RequestBody Student student) {
-        Student fetchStudent = repository.findByID(id);
 
-        if (fetchStudent != null) {
-            fetchStudent.setStudentID(id);
-            fetchStudent.setStudentName(student.getStudentName());
-            repository.update(fetchStudent);
-            return new ResponseEntity<>("[UPDATE] " + fetchStudent.getStudentName() + " was updated.", HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>("[ERROR] " + student.getStudentName() + " was not found.", HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
     @GetMapping("/students/{id}/classes")
-    public ResponseEntity<Classes> getClasses(@PathVariable("id") int id) {
-        Student fetchStudent = repository.findByID(id);
-        if (fetchStudent != null) {
+    public ResponseEntity<List<Classes>> getClasses(@PathVariable("id") int id) {
+       List<Classes> list = repository.getClass(id);
 
-            return new ResponseEntity<>(repository.getClass(id), HttpStatus.OK);
+        for (Classes classes: list) {
+            System.out.println("[RETRIEVE] " + classes.toString());
         }
-        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+
+        return new ResponseEntity<List<Classes>> ( repository.getClass(id), HttpStatus.OK);
     }
 }
 
