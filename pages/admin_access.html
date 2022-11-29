@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="..\styles\style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <ul id="header_tags_left">
+                <li id="logo">Logo</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+            <ul id="header_tags_right">
+                <li>Log In</li>
+                <li id="signup">Sign Up</li>
+            </ul>
+        </div>
+        <div id="course_create_wrapper">
+            <form id="course_create_form">
+                <label for="instructor_entry">Instructor ID:</label>
+                <input class="course_create_input" type="text" id="instructor_id_entry">
+                <label for="class_id_entry">Course ID:</label>
+                <input class="course_create_input" type="text" id="class_id_entry">
+                <input class="course_create_input" type="submit">
+            </form>
+        </div>
+        <div id="created_course_wrapper">
+            <ul id="created_course_list">
+                <li class="created_course">
+                    <p>Course ID</p>
+                    <p>Professor ID</p>
+                    <button>Remove Course</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
