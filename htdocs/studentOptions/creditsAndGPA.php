@@ -66,7 +66,7 @@ ON class.studentID = student.studentID
 LEFT JOIN teacher 
 ON class.teacherID = teacher.teacherID
 
-WHERE class.grade IS NOT null AND class.grade != '' AND student.studentID = '$username' AND class.grade = ('a' OR 'b' OR 'c' OR 'd')
+WHERE class.grade IS NOT null AND class.grade != '' AND student.studentID = '$username' 
 ORDER BY semester"
 ;
 $result = mysqli_query($db, $query);
@@ -76,7 +76,7 @@ echo "<table border='1'>
 <th>Class Name</th>
 <th>Semester</th>
 <th>Grade</th>
-<th>Credits Earned</th>
+<th>Credits Per Class</th>
 </tr>";
 
    while($rows=mysqli_fetch_assoc($result)) {
@@ -102,7 +102,7 @@ $query2 = "SELECT
    SUM(credits)
 FROM class
 
-WHERE class.grade IS NOT null AND class.grade != '' AND class.studentID = '$username' AND class.grade = ('a' OR 'b' OR 'c' OR 'p')
+WHERE class.grade IS NOT null AND class.grade != '' AND class.studentID = '$username' AND (class.grade = 'a' OR class.grade = 'b' OR class.grade = 'c' OR class.grade = 'p')
 ORDER BY semester"
 ;
 $result2 = mysqli_query($db, $query2);

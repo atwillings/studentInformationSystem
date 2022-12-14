@@ -26,7 +26,6 @@ $url1 = "updateSelectedStudent.php?adminID=$adminID&studentID=$studentID&student
 	Student ID <input type="text" name="studentID" value="<?php echo $_GET['studentID'] ?>" readonly/>                    			 <br><br>
 	Student First Name <input type="text" name="studentFirstName" value="<?php echo $_GET['studentFirstName'] ?>" readonly/>     <br><br>
 	Student Last Name <input type="text" name="studentLastName" value="<?php echo $_GET['studentLastName'] ?>" readonly/>        <br><br>
-	Student Last Name <input type="text" name="studentLastName" value="<?php echo $_GET['studentLastName'] ?>" readonly/>        <br><br>
 	Student Password <input type="text" name="studentPass" value="<?php echo $_GET['studentPass'] ?>" readonly/>        				 <br><br>
 	Class ID <input type="text" name="classID" value="<?php echo $_GET['classID'] ?>" readonly/>      												   <br><br>
 	Class Name <input type="text" name="className" value="<?php echo $_GET['className'] ?>" readonly/>      										 <br><br>
